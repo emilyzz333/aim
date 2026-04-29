@@ -69,8 +69,7 @@ interface AiReviewData {
       module_name: string;
       change_type: string;
       description: string;
-      importance: string;
-      moscow: string;
+      priority: string;
       acceptance_criteria?: Array<{
         scenario: string;
         given: string;
@@ -127,8 +126,8 @@ const SEVERITY_COLOR: Record<string, string> = {
 const SCENARIO_ICON: Record<string, string> = {
   正常流程: '✅', 异常流程: '❌', 边界情况: '⚠️',
 };
-const IMPORTANCE_COLOR: Record<string, string> = {
-  核心: 'red', 重要: 'orange', 辅助: 'blue',
+const PRIORITY_COLOR: Record<string, string> = {
+  P0: 'red', P1: 'orange', P2: 'blue', P3: 'default',
 };
 const CHANGE_TYPE_COLOR: Record<string, string> = {
   新增: 'green', 修改: 'orange', 删除: 'red', 优化: 'blue',
@@ -153,7 +152,7 @@ function renderFeaturesTab(result: AiReviewData['ai_understanding_result']) {
             📁 {moduleName}
           </div>
           <Collapse
-            defaultActiveKey={feats.filter(f => f.importance === '核心').map((_, i) => String(i))}
+            defaultActiveKey={feats.filter(f => f.priority === 'P0').map((_, i) => String(i))}
             style={{ background: 'transparent', border: 'none' }}
           >
             {feats.map((feat, i) => (
@@ -163,9 +162,8 @@ function renderFeaturesTab(result: AiReviewData['ai_understanding_result']) {
                 header={
                   <Space size={8}>
                     <Text strong style={{ fontSize: 14 }}>{feat.name}</Text>
-                    {feat.importance && <Tag color={IMPORTANCE_COLOR[feat.importance] || 'default'} style={{ margin: 0 }}>{feat.importance}</Tag>}
+                    {feat.priority && <Tag color={PRIORITY_COLOR[feat.priority] || 'default'} style={{ margin: 0 }}>{feat.priority}</Tag>}
                     {feat.change_type && <Tag color={CHANGE_TYPE_COLOR[feat.change_type] || 'default'} style={{ margin: 0 }}>{feat.change_type}</Tag>}
-                    {feat.moscow && <Tag color="purple" style={{ margin: 0 }}>{feat.moscow}</Tag>}
                   </Space>
                 }
               >

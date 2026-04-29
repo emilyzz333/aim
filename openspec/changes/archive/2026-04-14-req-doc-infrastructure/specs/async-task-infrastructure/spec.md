@@ -4,7 +4,7 @@
 系统 SHALL 提供独立的 `apps.tasks` app 作为异步任务基础设施，基于 Celery + Redis，不绑定任何具体业务模块，所有需要异步执行的任务（MD拉取、AI理解生成、定时任务、通知等）均在此 app 内注册。
 
 #### Scenario: Celery worker 正常启动
-- **WHEN** 在后端目录执行 `celery -A project_management worker -l info`
+- **WHEN** 在后端目录执行 `celery -A aim worker -l info`
 - **THEN** Worker 成功连接 Redis broker，输出任务注册列表，等待任务
 
 #### Scenario: 无 Redis 时开发模式降级

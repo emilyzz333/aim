@@ -82,7 +82,7 @@ AiInputAsset
 
 不加 `asset_type` 字段，用 `file_paths` 是否为空隐式区分，减少冗余字段。
 
-### D3：Celery 独立 app 还是配置在 project_management 下
+### D3：Celery 独立 app 还是配置在 aim 下
 
 选择**独立 `apps.tasks` app**。
 
@@ -91,7 +91,7 @@ AiInputAsset
 ```
 apps/tasks/
 ├── __init__.py
-├── celery.py         # Celery app 实例（在 project_management/celery.py 引用）
+├── celery.py         # Celery app 实例（在 aim/celery.py 引用）
 └── tasks/
     ├── __init__.py
     ├── md_tasks.py   # MD 拉取相关任务（Change B 填充）

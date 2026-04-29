@@ -28,7 +28,7 @@ cd backend
 # 1. 安装依赖
 pip install -r ../require.txt
 
-# 2. 配置数据库（修改 project_management/settings.py 中的 DATABASES）
+# 2. 配置数据库（修改 aim/settings.py 中的 DATABASES）
 # 创建数据库
 mysql -u root -p -e "CREATE DATABASE m_platform CHARACTER SET utf8mb4;"
 
@@ -49,8 +49,8 @@ python manage.py runserver
 python manage.py runserver 8888
 
 # 终端2：启动异步任务 Celery worker
-celery -A project_management worker -l info --pool=solo  #改用 solo 或 threads pool 代替 prefork，避免子进程的 _loc 缓存没有被正确初始化
-##celery -A project_management worker -l info  #这么启动会存在Celery 5.3.6 + billiard + Windows prefork 的已知 bug：子进程的 _loc 缓存没有被正确初始化导致报错ValueError: not enough values to unpack (expected 3, got 0)
+celery -A aim worker -l info --pool=solo  #改用 solo 或 threads pool 代替 prefork，避免子进程的 _loc 缓存没有被正确初始化
+##celery -A aim worker -l info  #这么启动会存在Celery 5.3.6 + billiard + Windows prefork 的已知 bug：子进程的 _loc 缓存没有被正确初始化导致报错ValueError: not enough values to unpack (expected 3, got 0)
 ```
 
 ### 前端
@@ -78,7 +78,7 @@ d:/gdSDDpmo/
 │   │   ├── tests/          # 测试用例（FunctionCase）、测试计划
 │   │   ├── bugs/           # 缺陷管理
 │   │   └── integrations/   # 第三方集成（GitLab、TAPD、AI、confluence）、Dashboard
-│   ├── project_management/ # Django 项目配置
+│   ├── aim/ # Django 项目配置
 │   └── manage.py
 ├── frontend/               # 前端代码（React + Ant Design）
 │   ├── src/

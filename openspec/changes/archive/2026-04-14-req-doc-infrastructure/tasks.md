@@ -1,16 +1,16 @@
 ## 1. 依赖安装与配置
 
 - [x] 1.1 在 `backend` 目录下安装新依赖：`celery`, `redis`, `python-docx`, `pdfplumber`, `Pillow`，并更新 `requirements.txt`
-- [x] 1.2 在 `project_management/settings.py` 中新增 Celery 配置（`CELERY_BROKER_URL`, `CELERY_RESULT_BACKEND`, `CELERY_TASK_ALWAYS_EAGER` 开发降级开关）
-- [x] 1.3 在 `project_management/settings.py` 中新增文件存储配置（`MEDIA_ROOT = BASE_DIR / 'static' / 'uploads'`, `MEDIA_URL`）
-- [x] 1.4 创建 `project_management/celery.py`，初始化 Celery app 实例，配置 `autodiscover_tasks`
-- [x] 1.5 修改 `project_management/__init__.py`，引入 Celery app 实例确保 Django 启动时加载
+- [x] 1.2 在 `aim/settings.py` 中新增 Celery 配置（`CELERY_BROKER_URL`, `CELERY_RESULT_BACKEND`, `CELERY_TASK_ALWAYS_EAGER` 开发降级开关）
+- [x] 1.3 在 `aim/settings.py` 中新增文件存储配置（`MEDIA_ROOT = BASE_DIR / 'static' / 'uploads'`, `MEDIA_URL`）
+- [x] 1.4 创建 `aim/celery.py`，初始化 Celery app 实例，配置 `autodiscover_tasks`
+- [x] 1.5 修改 `aim/__init__.py`，引入 Celery app 实例确保 Django 启动时加载
 
 ## 2. 独立异步任务 App
 
 - [x] 2.1 创建 `apps/tasks/` 目录，添加 `__init__.py`、`apps.py`
 - [x] 2.2 创建 `apps/tasks/tasks/` 目录，添加 `__init__.py`、`md_tasks.py`（占位，Change B 填充）、`ai_tasks.py`（占位，Change B 填充）
-- [x] 2.3 在 `project_management/settings.py` 的 `INSTALLED_APPS` 中添加 `apps.tasks`
+- [x] 2.3 在 `aim/settings.py` 的 `INSTALLED_APPS` 中添加 `apps.tasks`
 - [x] 2.4 在 `backend/` 目录下创建 `static/uploads/.gitkeep`，并确认 `.gitignore` 忽略 `static/uploads/*` 但保留 `.gitkeep`
 
 ## 3. 数据库模型变更（Requirement 字段）
@@ -33,7 +33,7 @@
 - [x] 5.3 在 `apps/requirements/views.py` 中新增 `AiInputAssetViewSet`，支持：列表查询（按 requirement + understand_type 过滤，按 created_at 降序）、创建（含 file_paths 验证）、局部更新（编辑 batch_desc/text_content/file_paths）、删除（同步删除关联文件）
 - [x] 5.4 在 `apps/requirements/views.py` 中新增 `AiUnderstandingViewSet`，支持：列表查询（按 requirement + type 过滤）、局部更新（编辑 ai_understanding 内容）、选优（PATCH `/select/` action：同类型取消其他选中，写入 `Requirement.req_understanding`）
 - [x] 5.5 在 `apps/requirements/urls.py` 中注册 `AiInputAssetViewSet` 和 `AiUnderstandingViewSet` 路由，路径格式 `/api/requirements/ai-input-assets/` 和 `/api/requirements/ai-understandings/`
-- [x] 5.6 在 `project_management/urls.py` 中配置 `MEDIA_URL` 的 static 文件服务（开发环境）
+- [x] 5.6 在 `aim/urls.py` 中配置 `MEDIA_URL` 的 static 文件服务（开发环境）
 
 ## 6. 前端字段名同步
 

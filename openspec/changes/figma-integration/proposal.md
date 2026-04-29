@@ -27,7 +27,7 @@
 
 ## Impact
 
-- **后端**：`apps/requirements/models.py`（source_type 枚举扩展）、`apps/requirements/views.py`（fetch_md 新分支）、`apps/tasks/tasks/md_tasks.py` 或新建 `apps/integrations/figma_service.py`（Figma API 封装）、`apps/integrations/views.py`（FigmaConfigView）、`apps/integrations/urls.py`（新增路由）、`project_management/settings.py`（新增配置项）
+- **后端**：`apps/requirements/models.py`（source_type 枚举扩展）、`apps/requirements/views.py`（fetch_md 新分支）、`apps/tasks/tasks/md_tasks.py` 或新建 `apps/integrations/figma_service.py`（Figma API 封装）、`apps/integrations/views.py`（FigmaConfigView）、`apps/integrations/urls.py`（新增路由）、`aim/settings.py`（新增配置项）
 - **前端**：需求详情页链接输入组件（Figma 链接识别逻辑）
 - **依赖**：`requests` 库（已有）、Figma REST API（需用户提供 Personal Access Token）
 - **存储**：图片下载遵循现有 `FILE_UPLOAD_TO_OSS` 开关，调试阶段存本地，生产环境存 OSS

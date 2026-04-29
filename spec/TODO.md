@@ -19,7 +19,7 @@
 
 ## 一、环境配置（启动前必做）
 
-- [ ] 配置 MySQL 密码：修改 `backend/project_management/settings.py` 中 `DATABASES['default']['PASSWORD']`
+- [ ] 配置 MySQL 密码：修改 `backend/aim/settings.py` 中 `DATABASES['default']['PASSWORD']`
 - [ ] 创建数据库：`mysql -u root -p -e "CREATE DATABASE m_platform CHARACTER SET utf8mb4;"`
 - [ ] 执行数据迁移：`cd backend && python manage.py migrate`
 - [ ] 创建超级管理员：`python manage.py createsuperuser`

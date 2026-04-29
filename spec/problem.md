@@ -29,7 +29,7 @@ router.register('', BugViewSet, basename='bug')
 
 **问题**：settings.py 中 MySQL `PASSWORD` 为空字符串，导致 `(1045, "Access denied for user 'root'@'localhost' (using password: NO)")`。
 
-**解决方案**：修改 `project_management/settings.py` 中 `DATABASES['default']['PASSWORD']` 为实际 MySQL root 密码。
+**解决方案**：修改 `aim/settings.py` 中 `DATABASES['default']['PASSWORD']` 为实际 MySQL root 密码。
 
 ---
 
@@ -146,7 +146,7 @@ ValueError: not enough values to unpack (expected 3, got 0)
 
 **解决方案**：启动 worker 时改用 `solo` pool：
 ```bash
-celery -A project_management worker -l info --pool=solo
+celery -A aim worker -l info --pool=solo
 ```
 `solo` pool 在主进程中串行执行任务，避免了 Windows 子进程 fork 的问题。
 

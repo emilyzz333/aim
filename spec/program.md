@@ -50,7 +50,7 @@
 
 **目录结构整理**
 - 清理根目录遗留废弃目录：`bugs/`、`iterations/`、`projects/`、`requirements/`、`users/`、`test_management/`、`user_management/`、`md/`、`public/`、`db.sqlite3`
-- 将 Django 后端代码整体迁移到 `backend/` 子目录（`mv apps manage.py project_management backend/`）
+- 将 Django 后端代码整体迁移到 `backend/` 子目录（`mv apps manage.py aim backend/`）
 - 迁移后执行 `python manage.py check` 确认零错误，目录结构与 design.md 完全对齐
 
 **后端 migrations 修复**

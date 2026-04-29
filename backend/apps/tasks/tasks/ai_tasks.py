@@ -576,9 +576,9 @@ def _update_module_knowledge(instance, structured: dict):
             continue
 
         # 提取核心功能模式作为模块知识
-        core_features = [f for f in features if f.get('importance') == '核心']
+        core_features = [f for f in features if f.get('priority') == 'P0']
         if core_features:
-            content = '核心功能：' + '、'.join(f.get('name', '') for f in core_features if f.get('name'))
+            content = 'P0功能：' + '、'.join(f.get('name', '') for f in core_features if f.get('name'))
             ModuleKnowledge.objects.create(
                 module=matched_module,
                 knowledge_type='pattern',

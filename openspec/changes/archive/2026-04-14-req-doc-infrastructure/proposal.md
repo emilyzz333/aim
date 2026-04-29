@@ -29,6 +29,6 @@
 
 - **后端**：`apps/requirements/models.py`、`apps/requirements/serializers.py`、`apps/requirements/views.py`（upload-md endpoint 字段名更新）、新增 migration
 - **新增**：`apps/tasks/` app（Celery 配置、task 定义）、`apps/requirements/migrations/` 新迁移文件、`backend/static/uploads/` 目录
-- **配置**：`project_management/settings.py`（INSTALLED_APPS、MEDIA_ROOT、CELERY 配置）、`project_management/celery.py`（新增）
+- **配置**：`aim/settings.py`（INSTALLED_APPS、MEDIA_ROOT、CELERY 配置）、`aim/celery.py`（新增）
 - **前端**：所有使用 `requirement_md`、`technical_md`、`figma_url` 字段名的地方需同步更新为新字段名
 - **依赖**：新增 `celery`、`redis`（django-redis 或 redis-py）、`python-docx`、`pdfplumber`、`Pillow`（图片处理）

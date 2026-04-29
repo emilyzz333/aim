@@ -15,7 +15,7 @@ const { TextArea } = Input;
 const { Panel } = Collapse;
 const { Text } = Typography;
 
-const IMPORTANCE_COLOR: Record<string, string> = { 核心: 'red', 重要: 'orange', 辅助: 'blue' };
+const PRIORITY_COLOR: Record<string, string> = { P0: 'red', P1: 'orange', P2: 'blue', P3: 'default' };
 const CHANGE_TYPE_COLOR: Record<string, string> = { 新增: 'green', 修改: 'orange', 删除: 'red', 优化: 'blue' };
 const SCENARIO_ICON: Record<string, string> = { 正常流程: '✅', 异常流程: '❌', 边界情况: '⚠️' };
 const ISSUE_TYPE_COLOR: Record<string, string> = { 缺失: 'orange', 矛盾: 'red', 未定义: 'gold', 风险: 'volcano' };
@@ -37,12 +37,12 @@ function renderStructuredFeatures(result: Record<string, any>) {
       {Object.entries(groups).map(([moduleName, feats]) => (
         <div key={moduleName}>
           <div style={{ fontSize: 13, fontWeight: 600, color: '#555', marginBottom: 6 }}>📁 {moduleName}</div>
-          <Collapse defaultActiveKey={feats.filter((f: any) => f.importance === '核心').map((_: any, i: number) => String(i))} style={{ background: 'transparent', border: 'none' }}>
+          <Collapse defaultActiveKey={feats.filter((f: any) => f.priority === 'P0').map((_: any, i: number) => String(i))} style={{ background: 'transparent', border: 'none' }}>
             {feats.map((feat: any, i: number) => (
               <Panel key={String(i)} style={{ marginBottom: 6, background: '#fff', borderRadius: 8, border: '1px solid #e5e5e7' }} header={
                 <Space size={8}>
                   <Text strong style={{ fontSize: 14 }}>{feat.name}</Text>
-                  {feat.importance && <Tag color={IMPORTANCE_COLOR[feat.importance]} style={{ margin: 0 }}>{feat.importance}</Tag>}
+                  {feat.priority && <Tag color={PRIORITY_COLOR[feat.priority] || 'default'} style={{ margin: 0 }}>{feat.priority}</Tag>}
                   {feat.change_type && <Tag color={CHANGE_TYPE_COLOR[feat.change_type]} style={{ margin: 0 }}>{feat.change_type}</Tag>}
                 </Space>
               }>

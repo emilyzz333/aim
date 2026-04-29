@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parent.parent / '.env')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -229,7 +232,7 @@ AI_UNDERSTANDING_CONFIG = {
         'test_generation': {
             'enabled': True,
             'auto_trigger': False,
-            'min_importance': '重要',  # 只处理核心/重要功能
+            'min_priority': 'P1',  # 只处理 P0/P1 功能
         },
         'defect_prediction': {
             'enabled': False,

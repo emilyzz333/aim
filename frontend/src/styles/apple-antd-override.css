@@ -1,0 +1,339 @@
+/* Apple Design System - Ant Design Overrides */
+
+/* Global Font */
+* {
+  font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+/* Login page placeholder styling */
+.login-input-placeholder::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+}
+
+/* Buttons */
+.ant-btn-primary {
+  background: #0071e3 !important;
+  border: none !important;
+  border-radius: 980px !important;
+  font-weight: 400 !important;
+  height: 40px !important;
+  padding: 0 20px !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+  transition: background 0.2s ease !important;
+}
+
+.ant-btn-primary:hover {
+  background: #0077ed !important;
+  color: #ffffff !important;
+}
+
+.ant-btn-primary:disabled {
+  background: rgba(0, 113, 227, 0.4) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Small buttons - use less rounded corners */
+.ant-btn-sm.ant-btn-primary {
+  border-radius: 8px !important;
+  height: 32px !important;
+  padding: 0 12px !important;
+  font-size: 13px !important;
+}
+
+.ant-btn-default {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  height: 40px !important;
+  padding: 0 16px !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-btn-default:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Input */
+.ant-input,
+.ant-input-password .ant-input,
+.ant-select-selector,
+.ant-picker {
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  font-size: 14px !important;
+  min-height: 40px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-input-affix-wrapper {
+  border-radius: 8px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  min-height: 40px !important;
+  padding: 8px 11px !important;
+}
+
+.ant-input-affix-wrapper .ant-input {
+  min-height: auto !important;
+  border: none !important;
+}
+
+.ant-input:focus,
+.ant-input-password:focus,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selector,
+.ant-picker-focused {
+  border-color: #0071e3 !important;
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.1) !important;
+}
+
+/* Table */
+.ant-table {
+  background: #ffffff !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px 0px !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #f5f5f7 !important;
+  color: #1d1d1f !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-table-tbody > tr > td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  font-size: 14px !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(0, 113, 227, 0.04) !important;
+}
+
+/* Tag */
+.ant-tag {
+  border-radius: 6px !important;
+  font-size: 12px !important;
+  padding: 2px 8px !important;
+  border: none !important;
+}
+
+/* Drawer */
+.ant-drawer .ant-drawer-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 20px 24px !important;
+}
+
+.ant-drawer .ant-drawer-title {
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  color: #1d1d1f !important;
+  line-height: 1.19 !important;
+  letter-spacing: 0.231px !important;
+}
+
+.ant-drawer .ant-drawer-body {
+  background: #f5f5f7 !important;
+  padding: 24px !important;
+}
+
+.ant-drawer .ant-drawer-close {
+  color: rgba(0, 0, 0, 0.48) !important;
+  width: 36px !important;
+  height: 36px !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.ant-drawer .ant-drawer-close:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+  color: #1d1d1f !important;
+}
+
+.ant-drawer .ant-drawer-footer {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+  padding: 16px 24px !important;
+}
+.ant-modal-content {
+  border-radius: 18px !important;
+  box-shadow: rgba(0, 0, 0, 0.22) 3px 5px 30px 0px !important;
+}
+
+.ant-modal-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border-radius: 18px 18px 0 0 !important;
+  padding: 20px 24px !important;
+}
+
+.ant-modal-title {
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  color: #1d1d1f !important;
+}
+
+.ant-modal-body {
+  padding: 24px !important;
+}
+
+.ant-modal-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.08) !important;
+  padding: 16px 24px !important;
+}
+
+/* Drawer */
+.ant-drawer-content {
+  background: #f5f5f7 !important;
+}
+
+.ant-drawer-header {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 20px 24px !important;
+}
+
+.ant-drawer-title {
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  color: #1d1d1f !important;
+}
+
+.ant-drawer-body {
+  padding: 24px !important;
+}
+
+/* Select Dropdown */
+.ant-select-dropdown {
+  border-radius: 12px !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px 0px !important;
+  padding: 8px !important;
+}
+
+.ant-select-item {
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  padding: 8px 12px !important;
+}
+
+.ant-select-item-option-selected {
+  background: rgba(0, 113, 227, 0.08) !important;
+  color: #0071e3 !important;
+}
+
+.ant-select-item-option-active {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Message */
+.ant-message-notice-content {
+  border-radius: 12px !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px 0px !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+}
+
+/* Spin */
+.ant-spin-dot-item {
+  background-color: #0071e3 !important;
+}
+
+/* Empty */
+.ant-empty-description {
+  color: rgba(0, 0, 0, 0.48) !important;
+  font-size: 14px !important;
+}
+
+/* Card */
+.ant-card {
+  border-radius: 18px !important;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px 0px !important;
+  border: none !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+  font-family: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 600 !important;
+  color: #1d1d1f !important;
+}
+
+/* Form */
+.ant-form-item-label > label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #1d1d1f !important;
+}
+
+/* Pagination */
+.ant-pagination-item {
+  border-radius: 6px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.ant-pagination-item-active {
+  background: #0071e3 !important;
+  border-color: #0071e3 !important;
+}
+
+.ant-pagination-item-active a {
+  color: #ffffff !important;
+}
+
+/* Dropdown Menu */
+.ant-dropdown-menu {
+  border-radius: 12px !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 20px 0px !important;
+  padding: 8px !important;
+}
+
+.ant-dropdown-menu-item {
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  padding: 8px 12px !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* TAPD HTML Content Rendering */
+.tapd-html-content a {
+  color: #0071e3;
+  word-break: break-all;
+}
+.tapd-html-content a:hover {
+  text-decoration: underline;
+}
+.tapd-html-content p {
+  margin-bottom: 0.5em;
+}
+.tapd-html-content img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+.tapd-html-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 8px 0;
+}
+.tapd-html-content table td,
+.tapd-html-content table th {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 6px 10px;
+  font-size: 13px;
+}

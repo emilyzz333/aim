@@ -1,0 +1,37 @@
+# SDD项管平台 后端依赖
+# Python 3.9
+# 更新时间: 2026-04-08
+
+# Web框架
+Django==4.2.29
+djangorestframework==3.16.1
+
+# JWT认证
+djangorestframework_simplejwt==5.5.1
+PyJWT==2.12.1
+
+# 跨域
+django-cors-headers==4.9.0
+
+# 数据库
+mysqlclient==2.2.7
+
+# 过滤
+django-filter==23.3
+
+# 异步任务
+celery==5.3.6
+django-celery-results==2.6.0
+
+# 文件解析
+python-docx==1.1.2
+pdfplumber==0.11.0
+Pillow==10.4.0
+
+# HTTP 工具
+requests==2.32.3
+html2text==2024.2.26
+
+# 其他
+asgiref==3.11.1
+sqlparse==0.5.5

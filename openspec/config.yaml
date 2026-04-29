@@ -1,0 +1,52 @@
+schema: spec-driven
+
+# Project context
+context: |
+  Tech stack:
+  - Frontend: React 18, TypeScript, Vite, Ant Design 5
+  - Backend: Django 4.2, Django REST Framework, PostgreSQL
+  - Styling: Apple Design System (inspired by apple.com)
+
+  Design System:
+  - Follow Apple's design language from DESIGN_apple.md in project root
+  - Font: SF Pro Display (headings 20px+), SF Pro Text (body <20px)
+  - Colors: Apple Blue (#0071e3) for primary actions, light gray (#f5f5f7) backgrounds
+  - Typography: Tight line-heights (1.07-1.14 for headings), negative letter-spacing
+  - Buttons: Pill-shaped (980px radius) for primary CTAs, 8px radius for secondary
+  - Cards: 18px border-radius, soft shadows (rgba(0,0,0,0.08) 0px 2px 12px)
+  - Inputs: 8px border-radius, 40px height, minimal borders
+  - Tables: 12px border-radius, clean headers with #f5f5f7 background
+  - Navigation: Translucent glass effect (backdrop-filter: blur(20px))
+  - Spacing: Base 8px, generous whitespace between sections
+
+  UI Conventions:
+  - All new components must follow Apple design system styles
+  - Use apple-theme.ts for style constants
+  - Global Ant Design overrides in apple-antd-override.css
+  - Page containers: #f5f5f7 background, 32px 40px padding
+  - Interactive elements use Apple Blue with smooth transitions
+  - Avoid heavy shadows, gradients, or textures
+  - Keep interfaces minimal and content-focused
+
+  Code Conventions:
+  - Use TypeScript for all frontend code
+  - Functional components with hooks
+  - API requests via @/services/request
+  - Follow existing project structure
+
+# Per-artifact rules
+rules:
+  design:
+    - All UI designs must follow Apple Design System from DESIGN.md
+    - Reference apple-theme.ts for colors, fonts, and spacing
+    - Use SF Pro font family throughout
+    - Primary color is Apple Blue (#0071e3)
+    - Backgrounds should be #f5f5f7 or #ffffff
+    - Buttons should be pill-shaped (980px radius) for primary actions
+    - Cards should have 18px border-radius with soft shadows
+
+  tasks:
+    - Break tasks into chunks of max 2 hours
+    - Always apply Apple design system styles to new UI components
+    - Test on both desktop and mobile viewports
+

@@ -1,0 +1,17 @@
+# 用户上传的文件（本地存储，不入 git）
+static/uploads/*
+!static/uploads/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+*.log
+db.sqlite3
+
+
+#
+# openspec/*
+# spec/*
